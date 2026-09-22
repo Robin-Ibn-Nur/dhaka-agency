@@ -5,6 +5,7 @@ import Splide from "@splidejs/splide";
 import { motion, AnimatePresence } from "framer-motion";
 import { Film, CheckCircle2, X } from "lucide-react";
 import { playStampThud, playTelegraphClick } from "@/lib/sound";
+import { assetUrl } from "@/lib/assets";
 
 interface ServicesProps {
   onSelectService: (serviceName: string) => void;
@@ -381,7 +382,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                       {/* Archival 1904 Sepia Photograph */}
                       <div className="relative w-full h-full overflow-hidden bg-[#18130E]">
                         <img
-                          src={reel.image}
+                          src={assetUrl(reel.image)}
                           alt={reel.title}
                           loading={index < 3 ? "eager" : "lazy"}
                           decoding="async"
@@ -593,7 +594,7 @@ export default function Services({ onSelectService }: ServicesProps) {
               {/* Photo & Caption */}
               <div className="relative mb-5 border-2 border-ink overflow-hidden max-h-56">
                 <img
-                  src={selectedDossier.image}
+                  src={assetUrl(selectedDossier.image)}
                   alt={selectedDossier.title}
                   className="w-full h-full object-cover"
                 />

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Film, Volume2, VolumeX, Menu, X, Sparkles } from "lucide-react";
 import { playTelegraphClick } from "@/lib/sound";
+import { assetUrl } from "@/lib/assets";
 
 interface HeaderProps {
   filmMode: boolean;
@@ -68,7 +69,7 @@ export default function Header({
             {/* Official Dhaka Agency Logo (Larger & Prominent) */}
             <div className="relative h-16 sm:h-20 w-auto flex items-center border-2 border-ink bg-white p-1 shadow-[3px_3px_0px_0px_#1A1A1A] transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:shadow-[1px_1px_0px_0px_#1A1A1A] rounded-sm overflow-hidden flex-shrink-0">
               <img
-                src="/dhaka-agency-logo.jpg"
+                src={assetUrl("/dhaka-agency-logo.jpg")}
                 alt="Dhaka Agency Logo"
                 fetchPriority="high"
                 loading="eager"

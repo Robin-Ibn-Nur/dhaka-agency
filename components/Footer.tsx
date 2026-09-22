@@ -3,6 +3,7 @@
 import React from "react";
 import { ArrowUp, Film, Sparkles, Compass } from "lucide-react";
 import { playTelegraphClick, playStampThud } from "@/lib/sound";
+import { assetUrl } from "@/lib/assets";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -33,7 +34,7 @@ export default function Footer() {
               {/* Official Dhaka Agency Logo */}
               <div className="h-16 sm:h-20 w-auto flex items-center border-2 border-[#DFBA74] bg-white p-1 shadow-[2px_2px_0px_0px_#E31E24] rounded-sm overflow-hidden flex-shrink-0">
                 <img
-                  src="/dhaka-agency-logo.jpg"
+                  src={assetUrl("/dhaka-agency-logo.jpg")}
                   alt="Dhaka Agency Logo"
                   loading="lazy"
                   decoding="async"

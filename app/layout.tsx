@@ -11,6 +11,12 @@ import {
 } from "next/font/google";
 import "./globals.css";
 
+const oldNewspaper = localFont({
+  src: "../public/fonts/old-newspaper/old-newspaper-font.ttf",
+  variable: "--font-old-newspaper",
+  display: "swap",
+});
+
 const shockSurgent = localFont({
   src: "../public/fonts/shock-surgent/shock-surgent.otf",
   variable: "--font-shock-surgent",
@@ -92,6 +98,14 @@ export const metadata: Metadata = {
     "Old Dacca Bioscope",
   ],
   authors: [{ name: "Dhakagency Electric Press" }],
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -102,7 +116,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${shockSurgent.variable} ${playfairDisplay.variable} ${imFellEnglish.variable} ${notoSerifBengali.variable} ${ebGaramond.variable} ${courierPrime.variable} ${specialElite.variable} ${averiaSerif.variable}`}
+      className={`scroll-smooth ${oldNewspaper.variable} ${shockSurgent.variable} ${playfairDisplay.variable} ${imFellEnglish.variable} ${notoSerifBengali.variable} ${ebGaramond.variable} ${courierPrime.variable} ${specialElite.variable} ${averiaSerif.variable}`}
     >
       <body className="bg-parchment text-ink antialiased selection:bg-crimson selection:text-parchment-surface">
         {/* SVG Filter Definitions for Authentic Letterpress Ink Bleed */}

@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: 'Old Newspaper';
+  src: local('Old Newspaper'),
+       local('Old Newspaper Font'),
+       url('../public/fonts/old-newspaper/old-newspaper-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Shock Surgent';
   src: local('Shock Surgent'),
        url('../public/fonts/shock-surgent/shock-surgent.otf') format('opentype');
@@ -12,23 +22,33 @@
 }
 
 :root {
-  --font-shock-surgent: 'Shock Surgent', sans-serif;
-  --font-newspaper: 'Shock Surgent', 'Playfair Display', sans-serif;
-  --font-headline: 'Shock Surgent', sans-serif;
-  --font-bengali: 'Noto Serif Bengali', serif;
-  --font-body: 'Shock Surgent', 'EB Garamond', sans-serif;
-  --font-mono: 'Shock Surgent', monospace;
-  --font-inkbleed: 'Shock Surgent', sans-serif;
-  --font-inkbleed-serif: 'Shock Surgent', sans-serif;
+  --font-old-newspaper: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
+  --font-newspaper: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
+  --font-headline: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
+  --font-bengali: var(--font-bengali), 'Noto Serif Bengali', serif;
+  --font-body: var(--font-body), 'EB Garamond', Georgia, serif;
+  --font-mono: 'Old Newspaper', var(--font-old-newspaper), monospace;
+  --font-inkbleed: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
+  --font-inkbleed-serif: 'Old Newspaper', var(--font-old-newspaper), serif;
 }
 
 /* Background grain & newspaper noise */
 body {
   background-color: #F3EFE6;
   color: #1A1A1A;
-  font-family: 'Shock Surgent', var(--font-shock-surgent), sans-serif;
+  font-family: var(--font-body), 'EB Garamond', Georgia, serif;
   overflow-x: hidden;
   position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-headline,
+.font-newspaper,
+.font-masthead,
+.letterpress-text,
+.wax-seal-button,
+.brass-button {
+  font-family: 'Old Newspaper', var(--font-old-newspaper), serif;
 }
 
 /* Vintage Paper Grain Overlay */

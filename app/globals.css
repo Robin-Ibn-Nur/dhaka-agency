@@ -22,14 +22,15 @@
 }
 
 :root {
+  --font-shock-surgent: 'Shock Surgent', sans-serif;
   --font-old-newspaper: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
-  --font-newspaper: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
-  --font-headline: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
+  --font-newspaper: 'Shock Surgent', var(--font-shock-surgent), sans-serif;
+  --font-headline: 'Shock Surgent', var(--font-shock-surgent), sans-serif;
   --font-bengali: var(--font-bengali), 'Noto Serif Bengali', serif;
   --font-body: var(--font-body), 'EB Garamond', Georgia, serif;
   --font-mono: 'Old Newspaper', var(--font-old-newspaper), monospace;
-  --font-inkbleed: 'Old Newspaper', var(--font-old-newspaper), sans-serif;
-  --font-inkbleed-serif: 'Old Newspaper', var(--font-old-newspaper), serif;
+  --font-inkbleed: 'Shock Surgent', var(--font-shock-surgent), sans-serif;
+  --font-inkbleed-serif: 'Shock Surgent', var(--font-shock-surgent), serif;
 }
 
 /* Background grain & newspaper noise */
@@ -45,10 +46,8 @@ h1, h2, h3, h4, h5, h6,
 .font-headline,
 .font-newspaper,
 .font-masthead,
-.letterpress-text,
-.wax-seal-button,
-.brass-button {
-  font-family: 'Old Newspaper', var(--font-old-newspaper), serif;
+.letterpress-text {
+  font-family: 'Shock Surgent', var(--font-shock-surgent), sans-serif;
 }
 
 /* Vintage Paper Grain Overlay */
